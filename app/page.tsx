@@ -1,68 +1,204 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export default function Home() {
-  const fullName = "Tharani Sebi George"
-  const title = "Senior Solution Architect | Enterprise Architecture | AWS | Azure | OpenShift | AI & Automation"
-  const bio = `Senior Solution Architect with 20+ years of experience designing enterprise-scale cloud and database solutions across multiple industries. Specialized in AWS, Azure, OpenShift, enterprise architecture, automation, and cloud-native systems. Experienced across consulting, technical architecture, and solution architecture roles with strong exposure to AI-driven solutions, GitHub-based development workflows, and modern automation platforms.`
-
-  const experience = [
-    "20+ years in enterprise architecture and solution design",
-    "Specialized in AWS, Azure, and OpenShift",
-    "Delivered automation and AI-driven solutions",
-    "Consulting and large-scale system design"
-  ]
-
   return (
-    <main className="max-w-5xl mx-auto px-6 py-12">
-      <header className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-3xl font-extrabold text-slate-900">{fullName}</h1>
-          <p className="text-sm text-slate-600">{title}</p>
-        </div>
-        <nav className="space-x-4">
-          <Link href="/" className="text-sm text-slate-700 hover:text-slate-900">Home</Link>
-          <Link href="/about" className="text-sm text-slate-700 hover:text-slate-900">About</Link>
-          <Link href="/projects" className="text-sm text-slate-700 hover:text-slate-900">Projects</Link>
-          <Link href="/blog" className="text-sm text-slate-700 hover:text-slate-900">Blog</Link>
-          <Link href="/contact" className="text-sm text-slate-700 hover:text-slate-900">Contact</Link>
-        </nav>
-      </header>
+    <main className="text-slate-900">
 
-      <section className="grid md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-        <div>
-          <h2 className="text-2xl font-semibold text-slate-800 mb-3">About</h2>
-          <p className="text-slate-700 leading-relaxed">{bio}</p>
+      {/* header moved to layout for site-wide nav */}
 
-          <h3 className="mt-4 text-lg font-medium text-slate-800">Experience</h3>
-          <ul className="list-disc list-inside mt-2 text-slate-700">
-            {experience.map((e) => (
-              <li key={e}>{e}</li>
-            ))}
-          </ul>
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+
+        {/* subtle professional background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-100 to-white" />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-28 text-center">
+          <p className="text-blue-600 font-medium tracking-wide">
+            Enterprise Architecture • Cloud • Infrastructure • Automation
+          </p>
+
+          <h1 className="text-5xl md:text-6xl font-bold mt-6 leading-tight tracking-tight">
+            From Architecture Strategy <br />
+            to Production-Grade Systems
+          </h1>
 
           <div className="mt-4">
-            <p className="text-slate-700">LinkedIn: <Link href="https://linkedin.com/in/tharani-sebigeorge" className="text-indigo-600">linkedin.com/in/tharani-sebigeorge</Link></p>
+            <span className="inline-block bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">Tharani Sebi George</span>
           </div>
-        </div>
 
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-full rounded-lg overflow-hidden shadow-sm ring-1 ring-slate-50">
-            <Image src="/architecture.svg" alt="Architecture design" width={900} height={450} className="w-full h-auto" style={{filter: 'saturate(0.7) contrast(1.02)'}} priority />
+          <p className="mt-8 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            I help enterprises design, build, and operationalize scalable cloud systems
+            across AWS, Azure, and OpenShift — ensuring architecture is not just defined,
+            but successfully implemented, deployed, and running in production.
+          </p>
+
+          {/* CTA */}
+          <div className="mt-10 flex justify-center gap-4">
+            <a
+              href="/contact"
+              className="bg-slate-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-slate-800 transition"
+            >
+              Discuss a Project
+            </a>
+
+            <a
+              href="#services"
+              className="border border-slate-300 px-6 py-3 rounded-xl font-medium hover:border-slate-500 transition"
+            >
+              Explore Services
+            </a>
           </div>
-          <p className="text-sm text-slate-600 text-center">Architecture design — cloud, automation, and system thinking.</p>
+
+          {/* trust line */}
+          <p className="mt-10 text-sm text-slate-500">
+            20+ Years Experience • Enterprise Systems • Cloud Transformation • Automation & AI
+          </p>
+
         </div>
       </section>
 
-      <section className="mt-8">
-        <h3 className="text-xl font-semibold mb-2 text-slate-800">Quick Links</h3>
-        <div className="flex flex-wrap gap-3">
-          <Link href="/about" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md">About</Link>
-          <Link href="/projects" className="px-4 py-2 bg-slate-700 hover:bg-slate-800 text-white rounded-md">Projects</Link>
-          <Link href="/blog" className="px-4 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-md">Blog</Link>
-          <Link href="/contact" className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-md">Contact</Link>
+      {/* VALUE / DIFFERENTIATION */}
+      <section id="about" className="max-w-6xl mx-auto px-6 py-24">
+
+        <div className="text-center">
+
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Beyond Architecture — Into Real Production Delivery
+          </h2>
+
+          <p className="mt-6 text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Most architects focus on design documents.
+            I focus on end-to-end delivery — from architecture design to infrastructure
+            implementation, CI/CD pipelines, environment setup, and production readiness.
+          </p>
+
+        </div>
+
+        {/* cards */}
+        <div className="grid md:grid-cols-3 gap-6 mt-14">
+
+          {[
+            {
+              title: "Architecture",
+              desc: "Enterprise-grade scalable design aligned with business outcomes."
+            },
+            {
+              title: "Implementation",
+              desc: "Cloud infrastructure, CI/CD pipelines, and automation frameworks."
+            },
+            {
+              title: "Production Delivery",
+              desc: "Stable, secure, and operational systems running in real environments."
+            }
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="p-6 rounded-2xl border bg-white hover:shadow-md transition"
+            >
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-slate-600 mt-2 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+
         </div>
       </section>
+
+      {/* SERVICES */}
+      <section id="services" className="py-24">
+
+        <div className="max-w-6xl mx-auto px-6">
+
+          <h2 className="text-3xl font-bold text-center tracking-tight">
+            Core Services
+          </h2>
+
+          <p className="text-center text-slate-600 mt-4 max-w-2xl mx-auto">
+            End-to-end architecture and engineering support for enterprise transformation.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-14">
+
+            {[
+              "Solution Architecture Design",
+              "Cloud Migration (AWS / Azure / OpenShift)",
+              "Infrastructure Implementation",
+              "CI/CD & DevOps Automation",
+              "Environment Strategy (Dev → Prod)",
+              "Enterprise Modernization",
+              "Production Readiness Reviews",
+              "Technical Leadership & Consulting"
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-white border rounded-xl p-5 hover:shadow-sm transition"
+              >
+                {item}
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+      {/* APPROACH */}
+      <section id="approach" className="max-w-4xl mx-auto px-6 py-24 text-center">
+
+        <h2 className="text-3xl font-bold">
+          How I Deliver Value
+        </h2>
+
+        <div className="mt-10 space-y-6 text-slate-600 leading-relaxed">
+
+          <p>
+            I translate business requirements into scalable architecture blueprints.
+          </p>
+
+          <p>
+            I implement infrastructure, automation, and deployment pipelines to bring designs to life.
+          </p>
+
+          <p>
+            I ensure systems are production-ready, reliable, and operationally efficient.
+          </p>
+
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="bg-slate-900 text-white py-24">
+
+        <div className="max-w-4xl mx-auto text-center px-6">
+
+          <h2 className="text-3xl font-bold tracking-tight">
+            Let’s Build Systems That Scale in Production
+          </h2>
+
+          <p className="mt-6 text-slate-300">
+            Open for enterprise architecture, cloud transformation, and consulting engagements.
+          </p>
+
+          <div className="mt-10 flex justify-center gap-4">
+            <a
+              href="/contact"
+              className="bg-white text-slate-900 px-6 py-3 rounded-xl font-medium hover:bg-slate-200 transition"
+            >
+              Contact Me
+            </a>
+
+            <a
+              href="https://linkedin.com"
+              className="border border-slate-500 px-6 py-3 rounded-xl hover:border-white transition"
+            >
+              LinkedIn
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center py-10 text-sm text-slate-500">
+        © {new Date().getFullYear()} Solution Architecture Portfolio
+      </footer>
+
     </main>
-  )
+  );
 }

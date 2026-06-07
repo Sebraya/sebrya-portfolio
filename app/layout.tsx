@@ -27,7 +27,24 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col bg-[var(--background)]">
+
+        <header className="sticky top-0 z-50 backdrop-blur-sm bg-white/10 border-b">
+          <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+            <a href="/" className="font-extrabold tracking-tight text-lg md:text-xl text-sky-800">Tharani Sebi George</a>
+            <nav className="flex gap-6 text-sm text-slate-700">
+              <a href="/" className="hover:text-slate-900">Home</a>
+              <a href="/about" className="hover:text-slate-900">About</a>
+              <a href="/projects" className="hover:text-slate-900">Projects</a>
+              <a href="/blog" className="hover:text-slate-900">Blog</a>
+              <a href="/contact" className="hover:text-slate-900">Contact</a>
+            </nav>
+          </div>
+        </header>
+
+        <main className="flex-1">{children}</main>
+
+      </body>
     </html>
   );
 }

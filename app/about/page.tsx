@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="bg-white text-slate-900 font-sans py-12 px-4">
+    <main className="text-slate-900 font-sans py-12 px-4">
       <div className="mx-auto max-w-5xl">
         <header className="mb-10">
           <span className="inline-block bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full font-semibold">Solution Architect</span>
@@ -16,7 +16,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-semibold text-slate-900 mb-3">What I Deliver</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <article className="bg-slate-50 border border-slate-100 p-4 rounded-lg">
-              <h3 className="text-teal-800 mb-1">Solution Architecture</h3>
+              <h3 className="text-teal-800 mb-1">Senior Solution Architecture</h3>
               <p className="text-slate-600">Designing scalable, secure, and resilient solutions.</p>
             </article>
 
