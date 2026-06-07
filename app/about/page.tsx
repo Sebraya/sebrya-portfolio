@@ -1,44 +1,114 @@
-export default function About() {
-  const fullName = "Tharani Sebi George"
-  const title = "Senior Solution Architect | Enterprise Architecture | AWS | Azure | OpenShift | AI & Automation"
-  const bio = `Senior Solution Architect with 20+ years of experience designing enterprise-scale cloud and database solutions across multiple industries. Specialized in AWS, Azure, OpenShift, enterprise architecture, automation, and cloud-native systems. Experienced across consulting, technical architecture, and solution architecture roles with strong exposure to AI-driven solutions, GitHub-based development workflows, and modern automation platforms.`
+```tsx
+import Link from "next/link";
 
-  const experience = [
-    "20+ years in enterprise architecture and solution design",
-    "Specialized in AWS, Azure, and OpenShift",
-    "Delivered automation and AI-driven solutions",
-    "Consulting and large-scale system design"
-  ]
+const skills = [
+  "Cloud Architecture",
+  "AI Engineering",
+  "Platform Reliability",
+  "Full Stack Development",
+  "DevOps Automation",
+  "Microservices",
+  "Cybersecurity",
+  "Data Engineering",
+];
 
+export default function AboutPage() {
   return (
-    <section className="max-w-4xl mx-auto px-6 py-12">
-      <div className="flex items-center gap-6">
-        <div className="w-28 h-28 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">Photo</div>
-        <div>
-          <h1 className="text-3xl font-bold">{fullName}</h1>
-          <p className="text-gray-600">{title}</p>
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#1e3a8a,transparent_50%)]" />
+
+        {/* Architecture Grid */}
+        <svg
+          className="absolute inset-0 h-full w-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="grid"
+              width="60"
+              height="60"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 60 0 L 0 0 0 60"
+                fill="none"
+                stroke="rgba(255,255,255,0.08)"
+                strokeWidth="1"
+              />
+            </pattern>
+          </defs>
+
+          <rect width="100%" height="100%" fill="url(#grid)" />
+
+          {/* Architecture Flow */}
+          <g stroke="rgba(59,130,246,0.4)" strokeWidth="2" fill="none">
+            <rect x="120" y="120" width="180" height="70" rx="12" />
+            <rect x="420" y="120" width="180" height="70" rx="12" />
+            <rect x="720" y="120" width="180" height="70" rx="12" />
+
+            <line x1="300" y1="155" x2="420" y2="155" />
+            <line x1="600" y1="155" x2="720" y2="155" />
+
+            <rect x="260" y="320" width="220" height="80" rx="12" />
+            <rect x="560" y="320" width="220" height="80" rx="12" />
+
+            <line x1="510" y1="190" x2="510" y2="320" />
+            <line x1="670" y1="190" x2="670" y2="320" />
+          </g>
+        </svg>
+      </div>
+
+      {/* Content */}
+      <section className="relative z-10 mx-auto flex max-w-7xl flex-col px-6 py-24">
+        <div className="max-w-4xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-blue-400">
+            About Me
+          </p>
+
+          <h1 className="mb-8 text-5xl font-bold leading-tight md:text-7xl">
+            Designing scalable digital systems with modern engineering and AI.
+          </h1>
+
+          <p className="max-w-3xl text-lg leading-8 text-gray-300">
+            I build intelligent, scalable, and resilient platforms combining
+            cloud-native architecture, automation, AI systems, and modern web
+            technologies. My focus is creating elegant solutions that are both
+            technically robust and visually refined.
+          </p>
         </div>
-      </div>
 
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-2">About</h2>
-        <p className="text-gray-700 leading-relaxed">{bio}</p>
-      </div>
-
-      <div className="mt-6">
-        <h3 className="text-xl font-semibold">Experience</h3>
-        <ul className="list-disc list-inside mt-2 text-gray-700">
-          {experience.map((e) => (
-            <li key={e}>{e}</li>
+        {/* Skills */}
+        <div className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {skills.map((skill) => (
+            <div
+              key={skill}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-blue-400 hover:bg-blue-500/10"
+            >
+              <h3 className="text-lg font-semibold">{skill}</h3>
+            </div>
           ))}
-        </ul>
-      </div>
+        </div>
 
-      <div className="mt-6">
-        <h3 className="text-xl font-semibold">Contact</h3>
-        <p className="text-gray-700">Email: (I'll update later)</p>
-        <p className="text-gray-700">LinkedIn: https://linkedin.com/in/tharani-sebigeorge</p>
-      </div>
-    </section>
-  )
+        {/* CTA */}
+        <div className="mt-20 flex flex-wrap gap-6">
+          <Link
+            href="/projects"
+            className="rounded-xl bg-blue-500 px-8 py-4 text-lg font-semibold transition hover:bg-blue-400"
+          >
+            View Projects
+          </Link>
+
+          <Link
+            href="/contact"
+            className="rounded-xl border border-white/20 px-8 py-4 text-lg font-semibold transition hover:border-blue-400 hover:bg-white/5"
+          >
+            Contact Me
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
 }
+```
