@@ -1,179 +1,98 @@
-```tsx
 import Link from "next/link";
 
-const domains = [
-  "AWS",
-  "Microsoft Azure",
-  "OpenShift",
-  "Kubernetes",
-  "Hybrid Cloud",
-  "On-Prem Infrastructure",
-  "AI Platforms",
-  "DevOps Automation",
-  "Enterprise Architecture",
-  "Microservices",
-  "Observability",
-  "Security & Compliance",
-];
-
-const phases = [
-  "Requirements Gathering",
-  "Discovery Workshops",
-  "Context & Capability Mapping",
-  "AS-IS Infrastructure Analysis",
-  "Target State Architecture",
-  "Cost Analysis & Optimization",
-  "Solution Design Documentation",
-  "Enterprise Architecture Governance",
-  "Implementation Strategy",
-  "End-to-End Product Delivery",
+const CAPABILITIES = [
+  {
+    title: "Solution Architecture",
+    desc: "Designing scalable, secure, and resilient solutions aligned with business objectives.",
+  },
+  {
+    title: "Technical Infrastructure",
+    desc: "Implementing cloud and on-prem infrastructure, CI/CD, and operational foundations.",
+  },
+  {
+    title: "Environment & Deployment",
+    desc: "Structured environment strategy and reliable promotion pipelines (Dev → Prod).",
+  },
+  {
+    title: "Cloud & Platform Engineering",
+    desc: "Cloud adoption, platform setup, automation, and operational readiness.",
+  },
+  {
+    title: "Governance & Leadership",
+    desc: "Architecture reviews, standards, mentoring, and delivery governance.",
+  },
 ];
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-cyan-900" />
+    <main className="min-h-screen bg-slate-900 text-white">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        {/* Hero */}
+        <div className="md:flex md:items-start md:justify-between">
+          <div className="md:max-w-2xl">
+            <p className="text-sm uppercase tracking-wide text-slate-400">Solution Architect</p>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight text-white">Designing, building, and delivering scalable solutions</h1>
+            <p className="mt-4 text-lg text-slate-300">Turning business vision into production-ready technology — end-to-end architecture, implementation, and operational readiness.</p>
 
-        {/* Architecture Pattern */}
-        <svg
-          className="absolute inset-0 h-full w-full"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern
-              id="grid"
-              width="50"
-              height="50"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 50 0 L 0 0 0 50"
-                fill="none"
-                stroke="rgba(255,255,255,0.08)"
-                strokeWidth="1"
-              />
-            </pattern>
-          </defs>
+            <div className="mt-6 flex gap-3">
+              <Link href="/contact" className="inline-block rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-700">Discuss Your Project</Link>
+              <Link href="/blog" className="inline-block rounded-md px-5 py-3 text-sm font-medium text-slate-200 hover:text-white">Read My Blog</Link>
+            </div>
+          </div>
 
-          <rect width="100%" height="100%" fill="url(#grid)" />
-
-          <g
-            stroke="rgba(59,130,246,0.35)"
-            strokeWidth="2"
-            fill="none"
-          >
-            <rect x="120" y="120" width="220" height="80" rx="12" />
-            <rect x="450" y="120" width="220" height="80" rx="12" />
-            <rect x="780" y="120" width="220" height="80" rx="12" />
-
-            <line x1="340" y1="160" x2="450" y2="160" />
-            <line x1="670" y1="160" x2="780" y2="160" />
-
-            <rect x="280" y="340" width="240" height="90" rx="12" />
-            <rect x="620" y="340" width="240" height="90" rx="12" />
-
-            <line x1="560" y1="200" x2="560" y2="340" />
-            <line x1="730" y1="200" x2="730" y2="340" />
-          </g>
-        </svg>
-      </div>
-
-      {/* Content */}
-      <section className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-5xl">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-cyan-400">
-            About Me
-          </p>
-
-          <h1 className="mb-8 text-5xl font-bold leading-tight md:text-7xl">
-            Enterprise Solution Architect focused on AI, Cloud, and Modern
-            Platform Engineering.
-          </h1>
-
-          <p className="max-w-4xl text-lg leading-8 text-gray-300">
-            In my current role as a Solution Architect, I work closely with
-            enterprise customers to understand business challenges, gather
-            technical and functional requirements, and design scalable
-            enterprise-grade solutions aligned with their transformation goals.
-          </p>
-
-          <p className="mt-6 max-w-4xl text-lg leading-8 text-gray-400">
-            My day-to-day activities involve conducting discovery workshops,
-            understanding AS-IS infrastructure landscapes, defining target-state
-            architectures, performing cost analysis, and producing detailed
-            architecture and observation documents for implementation teams.
-            Solutions are designed across hybrid cloud, on-premises,
-            OpenShift, AWS, and Azure environments depending on customer
-            requirements and operational constraints.
-          </p>
-
-          <p className="mt-6 max-w-4xl text-lg leading-8 text-gray-400">
-            I specialize in enterprise AI and cloud-native technologies,
-            delivering architecture strategies that support scalability,
-            resiliency, observability, security, and operational excellence.
-            Engagements range from advisory and design consulting to complete
-            end-to-end solution delivery.
-          </p>
+          <div className="mt-8 md:mt-0">
+            <div className="w-56 h-36 rounded-lg bg-gradient-to-br from-slate-800 to-slate-700 ring-1 ring-slate-700 p-4">
+              <p className="text-sm text-slate-300">Enterprise Architecture</p>
+              <p className="mt-3 text-xs text-slate-400">Cloud • Automation • Observability</p>
+            </div>
+          </div>
         </div>
 
-        {/* Engagement Phases */}
-        <div className="mt-20">
-          <h2 className="mb-8 text-3xl font-semibold">
-            Solution Delivery Lifecycle
-          </h2>
-
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-            {phases.map((phase) => (
-              <div
-                key={phase}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition hover:border-cyan-400 hover:bg-cyan-500/10"
-              >
-                <p className="text-sm font-medium leading-6 text-gray-200">
-                  {phase}
-                </p>
-              </div>
+        {/* Core Capabilities */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-medium text-white">What I Deliver</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {CAPABILITIES.map((c) => (
+              <article key={c.title} className="rounded-xl border border-slate-800 bg-slate-800/40 p-5">
+                <h3 className="text-lg font-semibold text-white">{c.title}</h3>
+                <p className="mt-2 text-sm text-slate-300">{c.desc}</p>
+              </article>
             ))}
           </div>
         </div>
 
-        {/* Technology Expertise */}
-        <div className="mt-24">
-          <h2 className="mb-8 text-3xl font-semibold">
-            Technology Expertise
-          </h2>
+        {/* Engagement Model */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-medium text-white">Engagement Model</h2>
+          <p className="mt-4 text-slate-300">I support projects at any stage — assessments, solution design, infrastructure planning, migration, DevOps enablement, and production readiness. I help establish environment strategies and governance to ensure reliable promotion across:</p>
+          <ul className="mt-4 list-inside list-disc text-slate-300">
+            <li>Development</li>
+            <li>Alpha / Beta / Testing</li>
+            <li>Staging / UAT</li>
+            <li>Production</li>
+          </ul>
+        </div>
 
-          <div className="flex flex-wrap gap-4">
-            {domains.map((domain) => (
-              <div
-                key={domain}
-                className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-medium text-cyan-300 backdrop-blur-md"
-              >
-                {domain}
-              </div>
-            ))}
+        {/* Thought Leadership */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-medium text-white">Sharing Knowledge</h2>
+          <p className="mt-4 text-slate-300">I write about practical architecture, cloud patterns, and operational lessons gathered from real projects — focused on helping teams make confident decisions.</p>
+          <div className="mt-4">
+            <Link href="/blog" className="text-indigo-400 hover:underline">Visit the blog →</Link>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-24 flex flex-wrap gap-6">
-          <Link
-            href="/projects"
-            className="rounded-xl bg-cyan-500 px-8 py-4 text-lg font-semibold text-black transition hover:bg-cyan-400"
-          >
-            View Projects
-          </Link>
-
-          <Link
-            href="/contact"
-            className="rounded-xl border border-white/20 px-8 py-4 text-lg font-semibold transition hover:border-cyan-400 hover:bg-white/5"
-          >
-            Contact Me
-          </Link>
+        <div className="mt-16 border-t border-slate-800 pt-10">
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <h3 className="text-xl font-semibold text-white">Ready to discuss your project?</h3>
+            <div className="mt-3 sm:mt-0 sm:ml-4 flex gap-3">
+              <Link href="/contact" className="inline-block rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-700">Discuss Your Project</Link>
+              <Link href="/blog" className="inline-block rounded-md px-5 py-3 text-sm font-medium text-slate-200 hover:text-white">Read My Blog</Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
   );
 }
-```
