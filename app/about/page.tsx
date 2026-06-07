@@ -1,287 +1,70 @@
-```html
-<section class="about-section">
-  <div class="container">
+import Link from "next/link";
 
-    <!-- Hero Section -->
-    <div class="hero-section">
-      <span class="badge">Solution Architect</span>
-
-      <h1>Designing, Building, and Delivering Scalable Solutions</h1>
-
-      <p class="hero-text">
-        Turning Business Vision into Production-Ready Technology.
-        I help organizations design, implement, and operationalize secure,
-        scalable technology solutions that align with business goals.
-        From architecture strategy and solution design to infrastructure
-        implementation, environment setup, and deployment planning,
-        I provide end-to-end support throughout the technology lifecycle.
-      </p>
-
-      <p class="hero-text">
-        Whether you're launching a new platform, modernizing legacy systems,
-        migrating to the cloud, or establishing enterprise architecture practices,
-        I focus on delivering practical solutions that move from concept to
-        production successfully.
-      </p>
-    </div>
-
-    <!-- What I Deliver -->
-    <div class="section">
-      <h2>What I Deliver</h2>
-
-      <div class="service-grid">
-
-        <div class="service-card">
-          <h3>Solution Architecture</h3>
-          <p>
-            Designing scalable, secure, and resilient solutions aligned with
-            business objectives and future growth.
+export default function AboutPage() {
+  return (
+    <main className="bg-white text-slate-900 font-sans py-12 px-4">
+      <div className="mx-auto max-w-5xl">
+        <header className="mb-10">
+          <span className="inline-block bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full font-semibold">Solution Architect</span>
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-3">Designing, Building, and Delivering Scalable Solutions</h1>
+          <p className="text-lg text-slate-600 leading-7 max-w-3xl mt-2">
+            Turning business vision into production-ready technology. I help organisations design, implement, and operationalize secure, scalable technology solutions aligned with business goals.
           </p>
-        </div>
+        </header>
 
-        <div class="service-card">
-          <h3>Technical Infrastructure Implementation</h3>
-          <p>
-            Building and configuring cloud and on-premises infrastructure,
-            deployment pipelines, networking components, security controls,
-            and operational foundations required for successful delivery.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-3">What I Deliver</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <article className="bg-slate-50 border border-slate-100 p-4 rounded-lg">
+              <h3 className="text-teal-800 mb-1">Solution Architecture</h3>
+              <p className="text-slate-600">Designing scalable, secure, and resilient solutions.</p>
+            </article>
+
+            <article className="bg-slate-50 border border-slate-100 p-4 rounded-lg">
+              <h3 className="text-teal-800 mb-1">Technical Infrastructure</h3>
+              <p className="text-slate-600">Implementing cloud and on-prem infrastructure, CI/CD, and networking.</p>
+            </article>
+
+            <article className="bg-slate-50 border border-slate-100 p-4 rounded-lg">
+              <h3 className="text-teal-800 mb-1">Environment & Deployment</h3>
+              <p className="text-slate-600">Environment strategy and reliable promotion pipelines (Dev → Prod).</p>
+            </article>
+
+            <article className="bg-slate-50 border border-slate-100 p-4 rounded-lg">
+              <h3 className="text-teal-800 mb-1">Cloud & Platform Engineering</h3>
+              <p className="text-slate-600">Platform adoption, automation, and operational readiness.</p>
+            </article>
+
+            <article className="bg-slate-50 border border-slate-100 p-4 rounded-lg">
+              <h3 className="text-teal-800 mb-1">Governance & Leadership</h3>
+              <p className="text-slate-600">Architecture reviews, standards, and stakeholder engagement.</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-3">Engagement Model</h2>
+          <p className="text-slate-600">
+            I support projects at any stage — assessments, solution design, migration, DevOps enablement, and production readiness. Typical environments include Development, QA, Staging/UAT, and Production.
           </p>
-        </div>
+        </section>
 
-        <div class="service-card">
-          <h3>Environment Strategy & Deployment Management</h3>
-          <p>
-            Establishing and managing structured environments with governance,
-            automation, and deployment consistency.
-          </p>
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold text-slate-900 mb-3">Sharing Knowledge</h2>
+          <p className="text-slate-600">I write practical posts about architecture, cloud patterns, and operational lessons from real projects.</p>
+          <Link href="/blog" className="text-indigo-600 mt-2 inline-block">Visit the blog →</Link>
+        </section>
 
-          <ul>
-            <li>Development</li>
-            <li>Alpha</li>
-            <li>Beta</li>
-            <li>Testing / QA</li>
-            <li>Staging / UAT</li>
-            <li>Production</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <h3>Cloud & Platform Engineering</h3>
-          <p>
-            Supporting cloud adoption, infrastructure modernization,
-            automation, CI/CD implementation, platform setup,
-            and operational readiness.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <h3>Architecture Governance & Technical Leadership</h3>
-          <p>
-            Providing architectural guidance, design reviews, standards,
-            mentoring, and stakeholder engagement to ensure successful
-            project execution.
-          </p>
-        </div>
-
+        <footer className="text-center bg-gradient-to-b from-slate-900 to-slate-800 text-slate-50 p-8 rounded-lg mt-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-white">Let's Build Solutions That Deliver Results</h2>
+          <p className="text-slate-200 mt-2">If you need a Solution Architect who can help design, implement, and operationalize production-ready systems, let's discuss your project.</p>
+          <div className="mt-4 flex gap-3 justify-center">
+            <Link href="/contact" className="px-4 py-2 rounded-md font-semibold bg-teal-400 text-slate-900">Discuss Your Project</Link>
+            <Link href="/blog" className="px-4 py-2 rounded-md font-semibold border border-white/20 text-slate-100">Read My Blog</Link>
+          </div>
+        </footer>
       </div>
-    </div>
-
-    <!-- Flexible Support -->
-    <div class="section">
-      <h2>Flexible Architecture & Delivery Support</h2>
-
-      <p>
-        Every organization has unique challenges. I can support projects
-        at any stage, from strategic planning to hands-on implementation
-        and production delivery.
-      </p>
-
-      <div class="support-grid">
-        <span>Architecture Assessments</span>
-        <span>Solution Design</span>
-        <span>Infrastructure Planning</span>
-        <span>Cloud Migration</span>
-        <span>Environment Setup</span>
-        <span>DevOps Enablement</span>
-        <span>Deployment Strategy</span>
-        <span>Production Readiness Reviews</span>
-        <span>Technical Troubleshooting</span>
-        <span>End-to-End Delivery Support</span>
-      </div>
-
-      <p>
-        Whether you need strategic architectural direction,
-        hands-on implementation expertise, or both,
-        I can adapt to your project needs and delivery model.
-      </p>
-    </div>
-
-    <!-- Knowledge Sharing -->
-    <div class="section">
-      <h2>Sharing Knowledge Through Real-World Experience</h2>
-
-      <p>
-        My blog is dedicated to practical architecture, cloud technologies,
-        implementation strategies, deployment patterns, governance frameworks,
-        and lessons learned from real-world projects.
-      </p>
-
-      <p>
-        The objective is not just to discuss technology but to help
-        organizations and technical teams make confident, informed decisions.
-      </p>
-    </div>
-
-    <!-- CTA -->
-    <div class="cta-section">
-      <h2>Let's Build Solutions That Deliver Results</h2>
-
-      <p>
-        If you're looking for a Solution Architect who can contribute beyond
-        diagrams and documentation—someone who can help design, implement,
-        deploy, and support successful solutions—I would welcome the
-        opportunity to discuss your project.
-      </p>
-
-      <p class="highlight">
-        Let's transform ideas into scalable, production-ready solutions.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<style>
-.about-section {
-  background: #ffffff;
-  color: #1f2937;
-  font-family: Inter, sans-serif;
-  padding: 60px 20px;
+    </main>
+  );
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.hero-section {
-  margin-bottom: 60px;
-}
-
-.badge {
-  display: inline-block;
-  background: #eff6ff;
-  color: #2563eb;
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #0f172a;
-}
-
-.hero-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #475569;
-  margin-bottom: 15px;
-}
-
-.section {
-  margin-bottom: 70px;
-}
-
-.section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 25px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-}
-
-.service-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 25px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.service-card h3 {
-  color: #2563eb;
-  margin-bottom: 12px;
-}
-
-.service-card p,
-.service-card li {
-  color: #475569;
-  line-height: 1.7;
-}
-
-.support-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 25px 0;
-}
-
-.support-grid span {
-  background: #eff6ff;
-  color: #2563eb;
-  padding: 10px 16px;
-  border-radius: 25px;
-  font-weight: 500;
-}
-
-.cta-section {
-  text-align: center;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  padding: 60px 40px;
-  border-radius: 20px;
-}
-
-.cta-section h2 {
-  color: white;
-  margin-bottom: 20px;
-}
-
-.cta-section p {
-  color: #cbd5e1;
-  line-height: 1.8;
-}
-
-.highlight {
-  margin-top: 20px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #60a5fa !important;
-}
-
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .section h2 {
-    font-size: 1.6rem;
-  }
-}
-</style>
-```
