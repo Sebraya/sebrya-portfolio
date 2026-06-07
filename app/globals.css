@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #cfe9ff; /* stronger professional light-blue */
+  --background: #f8fafc; /* light neutral background for better contrast */
   --foreground: #171717;
 }
 
