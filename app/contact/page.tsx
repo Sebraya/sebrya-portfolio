@@ -36,10 +36,10 @@ export default function ContactPage() {
             <div className="flex justify-between items-center p-3 bg-white border rounded-lg">
               <span className="text-slate-600">Email</span>
               <a
-                href="mailto:youremail@example.com"
+                href="mailto:Contact@Sebraya.com"
                 className="text-blue-600 font-medium"
               >
-                youremail@example.com
+                Contact@Sebraya.com
               </a>
             </div>
 
