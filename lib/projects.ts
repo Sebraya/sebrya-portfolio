@@ -26,6 +26,24 @@ export const projects: Project[] = [
       { date: "2026-06-05", contentHtml: `<p>Trace sampling tuned; alerting thresholds adjusted after runbook review.</p>` },
     ],
   },
+  {
+    slug: "website-creation",
+    title: "Website Creation & Management",
+    status: "in-progress",
+    excerpt: "Designing, building and managing the public website including content workflows and hosting.",
+    updates: [
+      { date: "2026-06-08", contentHtml: `<p>Initial design prototypes completed; CMS and hosting choices shortlisted.</p>` },
+    ],
+  },
+  {
+    slug: "mobile-app-creation",
+    title: "Mobile App Creation",
+    status: "in-progress",
+    excerpt: "Building a cross-platform mobile application to extend platform capabilities to iOS and Android.",
+    updates: [
+      { date: "2026-06-08", contentHtml: `<p>MVP scope defined; cross-platform framework prototyped and validated.</p>` },
+    ],
+  },
 ];
 
 export function getProjectBySlug(slug: string) {

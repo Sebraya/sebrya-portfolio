@@ -7,5 +7,23 @@
     "comment": "It's a test message",
     "createdAt": "2026-06-07T16:03:01.597Z",
     "replies": []
+  },
+  {
+    "id": "1780942252275-aywo6kb",
+    "name": "Test",
+    "email": "test@example.com",
+    "postSlug": "test-post",
+    "comment": "Hello",
+    "createdAt": "2026-06-08T18:10:52.275Z",
+    "replies": []
+  },
+  {
+    "id": "1780942621723-qw8l9fd",
+    "name": "Test",
+    "email": "tharani.vijay@gmail.com",
+    "postSlug": "architecture-is-shared-understanding",
+    "comment": "Test",
+    "createdAt": "2026-06-08T18:17:01.723Z",
+    "replies": []
   }
 ]

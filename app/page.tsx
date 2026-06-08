@@ -115,16 +115,17 @@ export default function Home() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mt-14">
-
             {[
               "Solution Architecture Design",
               "Cloud Migration (AWS / Azure / OpenShift)",
               "Infrastructure Implementation",
+              "Website Creation & Management",
+              "Mobile App Creation",
               "CI/CD & DevOps Automation",
               "Environment Strategy (Dev → Prod)",
               "Enterprise Modernization",
               "Production Readiness Reviews",
-              "Technical Leadership & Consulting"
+              "Technical Leadership & Consulting",
             ].map((item) => (
               <div
                 key={item}

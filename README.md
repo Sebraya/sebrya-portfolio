@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Comments Backend (Optional Cloud Storage)
+
+This project now supports storing comments in a Supabase database for persistent cloud storage.
+
+To enable it in production:
+
+1. Create a free Supabase project at https://supabase.com.
+2. Create a `comments` table with at least these columns:
+   - `id` (text, primary key)
+   - `name` (text)
+   - `email` (text)
+   - `post_slug` (text)
+   - `comment` (text)
+   - `created_at` (timestamp with time zone)
+   - `replies` (jsonb)
+3. Add the following environment variables in Vercel or your deployment platform:
+   - `SUPABASE_URL`
+   - `SUPABASE_SERVICE_ROLE_KEY` (preferred) or `SUPABASE_ANON_KEY`
+
+If Supabase is not configured, the app still uses the local `data/comments.json` file in development.
